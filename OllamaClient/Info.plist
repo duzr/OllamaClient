@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  App Transport Security exception for talking to Ollama servers on the
+	  local network. NSAllowsLocalNetworking permits cleartext HTTP to
+	  loopback, .local, and private-range (e.g. 192.168.x.x, 10.x.x.x) hosts,
+	  which is how the Ollama REST API is typically reached, without opening
+	  up arbitrary insecure connections to the public internet.
+	-->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+</dict>
+</plist>
